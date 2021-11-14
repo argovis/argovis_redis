@@ -1,8 +1,12 @@
 Redis container to support API rate limiting in https://github.com/argovis/argovis_api.
 
-Built at https://hub.docker.com/repository/docker/argovis/redis, tag matches Redis version tag.
-
 `diff redis.conf.original redis.conf` to see conf chagnges from defaults.
+
+## Release Process
+
+ - Tag definition: `<redis base tag>-<release yymmdd>`. For example, `:6.2.6-211114` was based of of docker image `redis:6.2.6` and tagged on November 14, 2021.
+ - Make release in this repo from `main` branch using this tag and release name.
+ - Build and push docker image `argovis/redis:<tag>`.
 
 ## Conf change notes:
 
